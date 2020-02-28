@@ -1,0 +1,56 @@
+#slider {
+    height: 100vh;
+    position: relative;
+    #btnLeft, 
+    #btnRight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    #btnLeft {
+        left: 25px;
+    }
+    #btnRight {
+        right:25px;
+    }
+    .slide-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+
+      &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+      &:nth-child(1) {
+            background: url(../photos/404-background-img-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+     &:nth-child(2) {
+            background: url(../photos/bg1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+     &:nth-child(3) {
+            background: url(../photos/page_bg_01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &:nth-child(4) {
+            background: url(../photos/r5CAq.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
